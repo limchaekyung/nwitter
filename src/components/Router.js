@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {
   HashRouter as Router,
-  Redirect,
+  // Redirect,
   Route,
   Switch,
 } from "react-router-dom";
@@ -23,14 +23,14 @@ const Approuter = ({ isLoggedIn, userObj }) => {
             <Route exact path="/profile">
               <Profile />
             </Route>
-            <Redirect from="*" to="/" />
+            {/* <Redirect from="*" to="/" /> */}
           </>
         ) : (
           <>
             <Route exact path="/">
               <Auth />
             </Route>
-            <Redirect from="*" to="/" />
+            {/* <Redirect from="*" to="/" /> */}
           </>
         )}
       </Switch>

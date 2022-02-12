@@ -1,9 +1,12 @@
 import { dbService } from "fbase";
 import React, { useState, useEffect } from "react";
+import Nweet from "components/Nweet";
 
-const Home = ({userObj}) => {
+const Home = ({ userObj }) => {
   const [nweet, setNweet] = useState("");
+  // form을 위한 state
   const [nweets, setNweets] = useState([]);
+  /* 오래된 버전(forEach)
   const getNweets = async () => {
       const dbNweets = await dbService.collection("nweets").get();
       dbNweets.forEach(document => {
@@ -16,13 +19,29 @@ const Home = ({userObj}) => {
   }
   useEffect(() => {
     getNweets();
+    dbService.collection("nweets").onSnapshot((snapshot) => {
+      console.log("Something happened")
+    })
   }, []);
+  */
+  useEffect(() => {
+    // Array => setNweets
+    // 더 적게 리렌더링(한번 실행됨), 빠르게 실행
+    dbService.collection("nweets").onSnapshot((snapshot) => {
+      const nweetArray = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setNweets(nweetArray);
+    });
+  }, []);
+
   const onSubmit = async (event) => {
     event.preventDefault();
     await dbService.collection("nweets").add({
-        text: nweet,
-        createdAt: Date.now(),
-        creatorId: userObj.uid,
+      text: nweet,
+      createdAt: Date.now(),
+      creatorId: userObj.uid,
     });
     setNweet("");
   };
@@ -45,11 +64,18 @@ const Home = ({userObj}) => {
         <input type="submit" value="Nweet" />
       </form>
       <div>
-          {nweets.map((nweet) => (
-              <div key={nweet.id}>
-                  <h4>{nweet.nweet}</h4>
-              </div>
-          ))}
+        {nweets.map((nweet) => (
+          <Nweet
+            key={nweet.id}
+            nweetObj={nweet} 
+            // nweetObj: nweet의 모든 data(author, text, createdAt)
+            isOwner={nweet.creatorId === userObj.uid} 
+            // isOwner: 다이나믹한 prop(true, false)
+            // nweet.creatorId(nweet을 만든사람)와 userObj.uid가 같으면 true
+            // userObj: Home의 props <- Router <- App.js
+            // (로그인, 로그아웃할 때 일어나는 onAuthStateChanged & Application initialize)
+          />
+        ))}
       </div>
     </div>
   );
