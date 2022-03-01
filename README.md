@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# 트위터:crescent_moon:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Twitter Clone coding
 
-## Available Scripts
+------
 
-In the project directory, you can run:
+# 기술 스택:baby_chick:
 
-### `npm start`
+### 사용언어
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white"> <img src="https://img.shields.io/badge/Vanilla JS-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=black">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=black"> <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=Firebase&logoColor=black"> 
 
-### `npm test`
+### 버전관리
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white"> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white">
 
-### `npm run build`
+## 툴
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src="https://img.shields.io/badge/Visual Studio Code-007ACC?style=for-the-badge&logo=Visual Studio Code&logoColor=white"> 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+------
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Pages
 
-### `npm run eject`
+### :iphone:Main Page
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![1](https://user-images.githubusercontent.com/77483541/156231539-26b24e2c-ba92-4eb9-a4d5-4225d6d9fa54.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+:bird: 리얼타임 DB 구현(Firebase)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+:bird: Tweet CRUD 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+:bird: File Upload
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### :iphone:Profile Page
 
-### Code Splitting
+![2](https://user-images.githubusercontent.com/77483541/156231551-3c18db64-80a6-44d8-b51d-9d5302ab6f2e.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+:bird: 이름 변경
 
-### Analyzing the Bundle Size
+:bird: 로그아웃
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### :iphone:Login & Signup Page
 
-### Advanced Configuration
+![3](https://user-images.githubusercontent.com/77483541/156231547-421bfedc-7184-4a80-acd4-a2b4b99ae96a.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+:bird: 로그인 및 회원가입
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+:bird: 구글, 깃허브 로그인
